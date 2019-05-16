@@ -27,6 +27,10 @@ namespace SpotifyShuffle
                 {
                     SearchItem item = Session.api.SearchItems("roadhouse+blues", SearchType.Album | SearchType.Playlist);
                     Console.WriteLine(item.Albums.Total); //How many results are there in total? NOTE: item.Tracks = item.Artists 
+
+
+                    CursorPaging<PlayHistory> histories = Session.api.GetUsersRecentlyPlayedTracks();
+               
                 }
 
 
